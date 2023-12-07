@@ -45819,7 +45819,7 @@ function updateAction$2(element) {
         const parent = element.parentElement;
         if (!parent)
             return [];
-        return [{ parent, node, reference }];
+        return [{ node: element }, { parent, node, reference }];
     };
 }
 function editTextWizard(element) {
