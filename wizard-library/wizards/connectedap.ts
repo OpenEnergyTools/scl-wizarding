@@ -3,7 +3,11 @@
 import { html } from 'lit';
 
 import { Edit } from '@openscd/open-scd-core';
-import { appIdGenerator, macAddressGenerator } from '@openenergytools/scl-lib';
+import {
+  appIdGenerator,
+  macAddressGenerator,
+  identity,
+} from '@openenergytools/scl-lib';
 
 import '@material/mwc-checkbox';
 import '@material/mwc-formfield';
@@ -16,6 +20,7 @@ import type { OscdFilteredList } from '@openscd/oscd-filtered-list';
 import type { ListItemBase } from '@material/mwc-list/mwc-list-item-base';
 
 import '../../foundation/components/scl-wizarding-textfield.js';
+
 import {
   Wizard,
   WizardActor,
@@ -26,8 +31,8 @@ import {
   compareNames,
   getValue,
 } from '../foundation.js';
+
 import { getReference } from '../../foundation/utils/scldata.js';
-import { identity } from '../../foundation/identities/identity.js';
 import { contentAddress, updateAddress } from './address.js';
 
 interface AccessPointDescription {

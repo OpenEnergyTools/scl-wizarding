@@ -14,6 +14,7 @@ import {
   getReference,
   identity,
   lnInstGenerator,
+  find,
 } from '@openenergytools/scl-lib';
 import { Edit, Insert } from '@openscd/open-scd-core';
 import { OscdFilteredList } from '@openscd/oscd-filtered-list';
@@ -24,7 +25,6 @@ import {
   WizardInputElement,
   createElement,
 } from '../foundation.js';
-import { selector } from '../../foundation/identities/selector.js';
 
 // global variables
 const selectedIEDs: string[] = [];
@@ -189,12 +189,11 @@ function createAction(parent: Element): WizardActor {
       .filter(item => !item.disabled)
       .map(item => item.value)
       .map(id => {
-        if (id.endsWith('LLN0'))
-          return parent.ownerDocument.querySelector(selector('LN0', id));
+        if (id.endsWith('LLN0')) return find(parent.ownerDocument, 'LN0', id);
         if (id.startsWith('#'))
-          return parent.ownerDocument.querySelector(selector('LNodeType', id));
+          return find(parent.ownerDocument, 'LNodeType', id);
 
-        return parent.ownerDocument.querySelector(selector('LN', id));
+        return find(parent.ownerDocument, 'LN', id);
       })
       .filter(item => item !== null) as Element[];
 
