@@ -2,6 +2,8 @@ import { TemplateResult, html } from 'lit';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Edit } from '@openscd/open-scd-core';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '../../foundation/components/scl-wizarding-textfield.js';
 
 import {
@@ -13,7 +15,6 @@ import {
   getValue,
 } from '../foundation.js';
 import { patterns } from './patterns.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 type EnumValContent = {
   ord: string | null;

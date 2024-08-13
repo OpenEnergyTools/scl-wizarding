@@ -5,6 +5,8 @@ import { Edit } from '@openscd/open-scd-core';
 
 import '@material/mwc-list/mwc-list-item';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '../../foundation/components/scl-wizarding-textfield.js';
 import '../../foundation/components/scl-wizarding-checkbox.js';
 import '../../foundation/components/scl-wizarding-select.js';
@@ -17,7 +19,6 @@ import {
   getValue,
 } from '../foundation.js';
 import { patterns } from './patterns.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 type DoContent = {
   name: string | null;

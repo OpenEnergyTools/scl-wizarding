@@ -5,6 +5,8 @@ import '@material/mwc-textarea';
 
 import { Edit } from '@openscd/open-scd-core';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import {
   createElement,
   getValue,
@@ -12,8 +14,6 @@ import {
   WizardActor,
   WizardInputElement,
 } from '../foundation.js';
-
-import { getReference } from '../../foundation/utils/scldata.js';
 
 type RenderOptions = { content: string };
 

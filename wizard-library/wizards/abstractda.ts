@@ -7,9 +7,12 @@ import '@material/mwc-list/mwc-list-item';
 import type { ListItem } from '@material/mwc-list/mwc-list-item';
 import { SelectedEvent } from '@material/mwc-list/mwc-list-foundation';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '../../foundation/components/scl-wizarding-textfield.js';
 import '../../foundation/components/scl-wizarding-select.js';
 import '../../foundation/components/scl-wizarding-checkbox.js';
+
 import type { SclWizardingSelect } from '../../foundation/components/scl-wizarding-select.js';
 import type { SclWizardingTextfield } from '../../foundation/components/scl-wizarding-textfield.js';
 
@@ -20,7 +23,6 @@ import {
   predefinedBasicTypeEnum,
   valKindEnum,
 } from './patterns.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 function selectType(e: SelectedEvent, data: Element, Val: string | null): void {
   if (!e.target || !(e.target as SclWizardingSelect).parentElement) return;

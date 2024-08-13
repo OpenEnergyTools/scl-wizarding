@@ -7,9 +7,10 @@ import { Edit } from '@openscd/open-scd-core';
 import '@material/mwc-checkbox';
 import '@material/mwc-formfield';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '../../foundation/components/scl-wizarding-textfield.js';
 
-import { getReference } from '../../foundation/utils/scldata.js';
 import { createElement, typeNullable, typePattern } from '../foundation.js';
 
 interface AddressContentOptions {

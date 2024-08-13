@@ -4,8 +4,11 @@ import { html, TemplateResult } from 'lit';
 import '@material/mwc-list/mwc-list-item';
 import '@material/mwc-select';
 
-import '../../foundation/components/scl-wizarding-textfield.js';
 import { Edit } from '@openscd/open-scd-core';
+
+import { getReference } from '@openenergytools/scl-lib';
+
+import '../../foundation/components/scl-wizarding-textfield.js';
 
 import {
   createElement,
@@ -16,7 +19,6 @@ import {
   WizardActor,
   WizardInputElement,
 } from '../foundation.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 const types: Partial<Record<string, string>> = {
   // standard

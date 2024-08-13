@@ -3,6 +3,8 @@ import { TemplateResult, html } from 'lit';
 
 import { Edit } from '@openscd/open-scd-core';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '@material/mwc-list/mwc-list-item';
 
 import '../../foundation/components/scl-wizarding-textfield.js';
@@ -16,7 +18,6 @@ import {
   getValue,
 } from '../foundation.js';
 import { patterns } from './patterns.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 type DoContent = {
   name: string | null;

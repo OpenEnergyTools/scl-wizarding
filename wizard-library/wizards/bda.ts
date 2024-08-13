@@ -2,6 +2,8 @@
 
 import { Edit } from '@openscd/open-scd-core';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import {
   createElement,
   getValue,
@@ -14,7 +16,6 @@ import {
   getValAction,
   renderAbstractDataAttributeContent,
 } from './abstractda.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 function createBDaAction(parent: Element): WizardActor {
   return (inputs: WizardInputElement[]): Edit[] => {

@@ -2,7 +2,10 @@
 import { html, TemplateResult } from 'lit';
 import { Edit } from '@openscd/open-scd-core';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '../../foundation/components/scl-wizarding-textfield.js';
+
 import {
   cloneElement,
   createElement,
@@ -14,7 +17,6 @@ import {
   WizardInputElement,
 } from '../foundation.js';
 import { patterns } from './patterns.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 /** Initial attribute values suggested for `SubNetwork` creation */
 const initial = {

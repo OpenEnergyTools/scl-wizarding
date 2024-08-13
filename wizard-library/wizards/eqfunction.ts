@@ -1,6 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { Edit } from '@openscd/open-scd-core';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import {
   createElement,
   getValue,
@@ -10,7 +12,6 @@ import {
   WizardInputElement,
 } from '../foundation.js';
 import { contentFunctionWizard } from './function.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 function createAction(parent: Element): WizardActor {
   return (inputs: WizardInputElement[]): Edit[] => {

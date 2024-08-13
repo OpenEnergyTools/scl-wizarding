@@ -2,6 +2,8 @@ import { html, TemplateResult } from 'lit';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Edit } from '@openscd/open-scd-core';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '../../foundation/components/scl-wizarding-textfield.js';
 import '../../foundation/components/scl-wizarding-select.js';
 import '../../foundation/components/scl-wizarding-checkbox.js';
@@ -14,8 +16,6 @@ import {
   WizardActor,
   WizardInputElement,
 } from '../foundation.js';
-
-import { getReference } from '../../foundation/utils/scldata.js';
 
 type RenderOptions = {
   name: string | null;

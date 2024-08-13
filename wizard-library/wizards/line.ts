@@ -2,6 +2,8 @@
 import { html, TemplateResult } from 'lit';
 import { Edit } from '@openscd/open-scd-core';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '../../foundation/components/scl-wizarding-textfield.js';
 
 import {
@@ -13,7 +15,6 @@ import {
   WizardInputElement,
 } from '../foundation.js';
 import { patterns } from './patterns.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 type RenderOptions = {
   name: string;

@@ -5,6 +5,8 @@ import { Edit } from '@openscd/open-scd-core';
 
 import { Checkbox } from '@material/mwc-checkbox';
 
+import { getReference } from '@openenergytools/scl-lib';
+
 import '../../foundation/components/scl-wizarding-textfield.js';
 import {
   createElement,
@@ -14,7 +16,6 @@ import {
   WizardInputElement,
 } from '../foundation.js';
 import { contentAddress, updateAddress } from './address.js';
-import { getReference } from '../../foundation/utils/scldata.js';
 
 function mxxTimeUpdateAction(
   gse: Element,

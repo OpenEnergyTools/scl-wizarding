@@ -7,6 +7,7 @@ import {
   appIdGenerator,
   macAddressGenerator,
   identity,
+  getReference,
 } from '@openenergytools/scl-lib';
 
 import '@material/mwc-checkbox';
@@ -32,7 +33,6 @@ import {
   getValue,
 } from '../foundation.js';
 
-import { getReference } from '../../foundation/utils/scldata.js';
 import { contentAddress, updateAddress } from './address.js';
 
 interface AccessPointDescription {
