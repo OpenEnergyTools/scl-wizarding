@@ -112,7 +112,7 @@ export function createAction(parent: Element): WizardActor {
         multiplier,
       });
       voltageElement.textContent = Voltage;
-      element.appendChild(voltageElement);
+      element.insertBefore(voltageElement, element.firstChild);
     }
 
     return [
@@ -163,7 +163,7 @@ function getVoltageAction(
       {
         parent: voltageLevel,
         node: element,
-        reference: getReference(voltageLevel, 'VoltageLevel'),
+        reference: getReference(voltageLevel, 'VoltageLevel') ?? voltageLevel.firstChild,
       },
     ];
   }
