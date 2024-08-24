@@ -29,7 +29,7 @@ import { editGseWizard } from './gse.js';
 import { iEDEditWizard } from './ied.js';
 import { lDeviceEditWizard } from './ldevice.js';
 import { createLineWizard, editLineWizard } from './line.js';
-import { createLNodeWizard } from './lnode.js';
+import { createLNodeWizard, editLNodeWizard } from './lnode.js';
 import { createLNodeTypeWizard } from './lnodetype.js';
 import {
   createPowerTransformerWizard,
@@ -61,6 +61,7 @@ import {
 
 type SclElementWizard = (
   element: Element,
+  subWizard?: boolean,
   instanceElement?: Element
 ) => Wizard | undefined;
 
@@ -319,7 +320,10 @@ export const wizards: Record<
     edit: emptyWizard,
     create: emptyWizard,
   },
-  LNode: { edit: emptyWizard, create: createLNodeWizard },
+  LNode: {
+    edit: editLNodeWizard,
+    create: createLNodeWizard
+  },
   LNodeType: {
     edit: emptyWizard,
     create: createLNodeTypeWizard,
