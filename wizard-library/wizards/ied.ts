@@ -72,7 +72,9 @@ export function updateAction(element: Element): WizardActor {
 export function iEDEditWizard(element: Element): Wizard {
   const iedNames: string[] = Array.from(
     element.ownerDocument.querySelectorAll(':root > IED')
-  ).map(ied => ied.getAttribute('name')!);
+  )
+    .map(ied => ied.getAttribute('name')!)
+    .filter(ied => ied !== element.getAttribute('name'));
 
   return [
     {
