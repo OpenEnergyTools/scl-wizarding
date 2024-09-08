@@ -13,6 +13,9 @@ export const patterns = {
   normalizedString:
     '([\u0020-\u007E]|[\u0085]|[\u00A0-\uD7FF]|[\uE000-\uFFFD])*',
   name,
+  tName:
+    '([\u0020-\u007E]|[\u0085]|[\u00A0-\uD7FF]|[\uE000-\uFFFD])' +
+    '([\u0020-\u007E]|[\u0085]|[\u00A0-\uD7FF]|[\uE000-\uFFFD])*',
   nmToken,
   names: `${name}( ${name})*`,
   nmTokens: `${nmToken}( ${nmToken})*`,
@@ -21,7 +24,11 @@ export const patterns = {
   integer: '[+\\-]?[0-9]+([0-9]*)',
   alphanumericFirstUpperCase: '[A-Z][0-9,A-Z,a-z]*',
   alphanumericFirstLowerCase: '[a-z][0-9,A-Z,a-z]*',
+  alphanumericFirst: '[A-Z,a-z][0-9,A-Z,a-z]*',
+  ldInst: '[A-Za-z0-9][0-9A-Za-z_]*',
+  prefix: '[A-Za-z][0-9A-Za-z_]*',
   lnClass: '(LLN0)|[A-Z]{4,4}',
+  lnInst: '[0-9]{1,12}',
   abstractDataAttributeName:
     '((T)|(Test)|(Check)|(SIUnit)|(Oper)|(SBO)|(SBOw)|(Cancel)|[a-z][0-9A-Za-z]*)',
   cdc:
@@ -29,11 +36,24 @@ export const patterns = {
     '(WYE)|(DEL)|(SEQ)|(HMV)|(HWYE)|(HDEL)|(SPC)|(DPC)|(INC)|(ENC)|(BSC)|(ISC)|(APC)|(BAC)|' +
     '(SPG)|(ING)|(ENG)|(ORG)|(TSG)|(CUG)|(VSG)|(ASG)|(CURVE)|(CSG)|(DPL)|(LPL)|(CSD)|(CST)|' +
     '(BTS)|(UTS)|(LTS)|(GTS)|(MTS)|(NTS)|(STS)|(CTS)|(OTS)|(VSD)',
+  uuid: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}',
+  id: '\\S{1,255}',
+  path: '.+(/.+)*',
+  mappedDoName:
+    '(([A-Za-z][0-9A-Za-z_]{0,63})/([A-Za-z][0-9A-Za-z_]{0,63})/((LLN0|([A-Za-z][0-9A-Za-z_]{0,10})?[A-Z]{4}[0-9]{1,12})).)?([A-Z][0-9A-Za-z]{0,11}(.[a-z][0-9A-Za-z]*(([0-9]+))?)?)',
+  vlanid: '[0-9A-F]{3}',
+  vlanPriority: '[0-7]',
+  ipv4: '([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|25[0-5]).([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|25[0-5]).([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|25[0-5]).([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|25[0-5])',
+  ipv6: '([0-9a-f]{1,4}:){7}[0-9a-f]{1,4}',
 };
 
 export const maxLength = {
   cbName: 32,
   abstracDaName: 60,
+  ldInst: 64,
+  prefix: 11,
+  lnInst: 12,
+  dosName: 12,
 };
 
 export const predefinedBasicTypeEnum = [
@@ -94,3 +114,38 @@ export const functionalConstraintEnum = [
   'EX',
   'CO',
 ];
+
+export const attributeNameEnum = [
+  'T',
+  'Test',
+  'Check',
+  'SIUnit',
+  'Oper',
+  'SBO',
+  'SBOw',
+  'Cancel',
+  'Addr',
+  'PRIORITY',
+  'VID',
+  'APPID',
+  'TransportInUse',
+  'IPClassOfTraffic',
+  'IPv6FlowLabel',
+  'IPAddressLength',
+  'IPAddress',
+];
+
+export const tSpecServiceType = [
+  'Poll',
+  'Report',
+  'GOOSE',
+  'SMV',
+  'Wired',
+  'Internal',
+];
+
+export const tSCLFileType = ['SED', 'SCC'];
+
+export const tRightEnum = ['full', 'fix', 'dataflow'];
+
+export const tSmpMod = ['SmpPerPeriod', 'SmpPerSec', 'SecPerSmp'];
