@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { TemplateResult, html, render } from 'lit';
 
-import { Edit } from '@openscd/open-scd-core';
+import { Edit } from '@openenergytools/open-scd-core';
 
 import '@material/mwc-list/mwc-list-item';
 import type { ListItem } from '@material/mwc-list/mwc-list-item';

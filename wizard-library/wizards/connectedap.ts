@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 import { html } from 'lit';
 
-import { Edit } from '@openscd/open-scd-core';
+import { Edit } from '@openenergytools/open-scd-core';
 import {
   appIdGenerator,
   macAddressGenerator,

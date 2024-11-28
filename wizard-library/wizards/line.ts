@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { html, TemplateResult } from 'lit';
-import { Edit } from '@openscd/open-scd-core';
+import { Edit } from '@openenergytools/open-scd-core';
 
 import { getReference } from '@openenergytools/scl-lib';
 

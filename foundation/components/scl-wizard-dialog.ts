@@ -12,7 +12,7 @@ import '@material/mwc-dialog';
 import { Dialog } from '@material/mwc-dialog';
 import type { List } from '@material/mwc-list';
 
-import { newEditEvent } from '@openscd/open-scd-core';
+import { newEditEvent } from '@openenergytools/open-scd-core';
 import {
   Wizard,
   WizardInputElement,

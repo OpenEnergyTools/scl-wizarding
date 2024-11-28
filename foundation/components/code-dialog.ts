@@ -6,7 +6,7 @@ import 'ace-custom-element';
 import '@material/mwc-dialog';
 import type AceEditor from 'ace-custom-element';
 
-import { Remove, Insert, newEditEvent } from '@openscd/open-scd-core';
+import { Remove, Insert, newEditEvent } from '@openenergytools/open-scd-core';
 
 function formatXml(xml: string, tab: string = '\t'): string {
   let formatted = '';

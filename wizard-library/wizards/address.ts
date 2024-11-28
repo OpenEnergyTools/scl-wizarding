@@ -2,7 +2,7 @@
 import { html, TemplateResult } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
-import { Edit } from '@openscd/open-scd-core';
+import { Edit } from '@openenergytools/open-scd-core';
 
 import '@material/mwc-checkbox';
 import '@material/mwc-formfield';

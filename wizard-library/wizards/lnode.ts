@@ -16,7 +16,7 @@ import {
   lnInstGenerator,
   find,
 } from '@openenergytools/scl-lib';
-import { Edit, Insert } from '@openscd/open-scd-core';
+import { Edit, Insert } from '@openenergytools/open-scd-core';
 import { OscdFilteredList } from '@openscd/oscd-filtered-list';
 
 import {

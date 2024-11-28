@@ -45,7 +45,7 @@
     "ace-custom-element": "^1.6.5",
     "lit": "^2.4.0",
     "rollup-plugin-copy": "^3.5.0",
-    "@openscd/open-scd-core": "^0.0.2"
+    "@openenergytools/open-scd-core": "0.0.5"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.6.6",

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { html, TemplateResult } from 'lit';
-import { Edit, Update } from '@openscd/open-scd-core';
+import { Edit, Update } from '@openenergytools/open-scd-core';
 
 import {
   updateVoltageLevel,
@@ -163,7 +163,8 @@ function getVoltageAction(
       {
         parent: voltageLevel,
         node: element,
-        reference: getReference(voltageLevel, 'VoltageLevel') ?? voltageLevel.firstChild,
+        reference:
+          getReference(voltageLevel, 'VoltageLevel') ?? voltageLevel.firstChild,
       },
     ];
   }
