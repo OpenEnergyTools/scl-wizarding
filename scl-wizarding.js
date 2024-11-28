@@ -47720,6 +47720,17 @@ class SclWizarding extends s$1 {
     ></wizard-code-form>`;
     }
 }
+SclWizarding.styles = i$5 `
+    * {
+      --mdc-text-field-fill-color: var(--oscd-base2);
+      --mdc-text-field-disabled-fill-color: var(--oscd-base3);
+      --mdc-text-field-ink-color: var(--oscd-base00);
+      --mdc-text-field-label-ink-color: var(--oscd-base00);
+      --mdc-select-fill-color: var(--oscd-base2);
+      --mdc-select-disabled-fill-color: var(--oscd-base3);
+      --mdc-select-ink-color: var(--oscd-base00);
+    }
+  `;
 __decorate$1([
     t$1()
 ], SclWizarding.prototype, "workflow", void 0);
