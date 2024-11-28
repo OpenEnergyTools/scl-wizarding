@@ -31,6 +31,8 @@ export default class SclWizarding extends LitElement {
   }
 
   private onWizard(we: WizardEvent) {
+    we.stopImmediatePropagation(); // Makes sure event is not propagated to OpenSCD core
+
     const wizard = we.detail;
     if (wizard === undefined) return;
     if (wizard === null) this.workflow.shift();
@@ -43,14 +45,20 @@ export default class SclWizarding extends LitElement {
   constructor() {
     super();
 
-    window.addEventListener('oscd-edit-wizard-request', event =>
-      this.onWizard(event as WizardEvent)
+    window.addEventListener(
+      'oscd-edit-wizard-request',
+      event => this.onWizard(event as WizardEvent),
+      { capture: true }
     );
-    window.addEventListener('oscd-create-wizard-request', event =>
-      this.onWizard(event as WizardEvent)
+    window.addEventListener(
+      'oscd-create-wizard-request',
+      event => this.onWizard(event as WizardEvent),
+      { capture: true }
     );
-    this.addEventListener('oscd-close-wizard', event =>
-      this.closeWizard(event as WizardEvent)
+    this.addEventListener(
+      'oscd-close-wizard',
+      event => this.closeWizard(event as WizardEvent),
+      { capture: true }
     );
   }
 
