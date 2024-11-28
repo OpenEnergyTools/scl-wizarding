@@ -17,7 +17,7 @@
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "start:build": "wds",
     "build": "rimraf dist && rollup -c rollup.config.js",
-    "deploy": "npm run build && gh-pages --dist 'dist'",
+    "deploy": "npm run build && gh-pages --dist 'dist' --branch 'deploy'",
     "prepublish": "tsc && npm run analyze -- --exclude dist",
     "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
