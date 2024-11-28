@@ -1,4 +1,4 @@
-import { LitElement, TemplateResult, html } from 'lit';
+import { LitElement, TemplateResult, css, html } from 'lit';
 import { state, queryAll } from 'lit/decorators.js';
 
 import '@material/mwc-icon-button';
@@ -70,4 +70,16 @@ export default class SclWizarding extends LitElement {
       .wizardRequest="${this.workflow[0]}"
     ></wizard-code-form>`;
   }
+
+  static styles = css`
+    * {
+      --mdc-text-field-fill-color: var(--oscd-base2);
+      --mdc-text-field-disabled-fill-color: var(--oscd-base3);
+      --mdc-text-field-ink-color: var(--oscd-base00);
+      --mdc-text-field-label-ink-color: var(--oscd-base00);
+      --mdc-select-fill-color: var(--oscd-base2);
+      --mdc-select-disabled-fill-color: var(--oscd-base3);
+      --mdc-select-ink-color: var(--oscd-base00);
+    }
+  `;
 }
