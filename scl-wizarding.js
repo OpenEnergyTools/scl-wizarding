@@ -27241,7 +27241,8 @@ let CodeDialog = class CodeDialog extends s$1 {
             this.dispatchEvent(new CustomEvent('closed'));
     }
     updated() {
-        this.editor.basePath = 'dist/foundation/components/ace';
+        const basePath = import.meta.resolve('./ace');
+        this.editor.basePath = basePath;
         this.editor.mode = 'ace/mode/xml';
         this.editor.theme = 'ace/theme/oscd_custom';
     }
