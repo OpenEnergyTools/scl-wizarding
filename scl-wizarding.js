@@ -27241,8 +27241,9 @@ let CodeDialog = class CodeDialog extends s$1 {
             this.dispatchEvent(new CustomEvent('closed'));
     }
     updated() {
-        this.editor.basePath = '';
+        this.editor.basePath = 'dist/foundation/components/ace';
         this.editor.mode = 'ace/mode/xml';
+        this.editor.theme = 'ace/theme/oscd_custom';
     }
     render() {
         if (!this.element)
@@ -27257,7 +27258,6 @@ let CodeDialog = class CodeDialog extends s$1 {
       <ace-editor
         wrap
         soft-tabs
-        theme="ace/theme/solarized_light"
         value="${formatXml(new XMLSerializer().serializeToString(this.element))}"
         style="width: 80vw; height: calc(100vh - 240px);"
       ></ace-editor>
