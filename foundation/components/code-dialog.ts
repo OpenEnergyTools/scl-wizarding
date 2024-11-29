@@ -64,8 +64,10 @@ export default class CodeDialog extends LitElement {
   }
 
   updated(): void {
-    this.editor.basePath = '';
+    const basePath = import.meta.resolve('./ace');
+    this.editor.basePath = basePath;
     this.editor.mode = 'ace/mode/xml';
+    this.editor.theme = 'ace/theme/oscd_custom';
   }
 
   render(): TemplateResult {
@@ -81,7 +83,6 @@ export default class CodeDialog extends LitElement {
       <ace-editor
         wrap
         soft-tabs
-        theme="ace/theme/solarized_light"
         value="${formatXml(
           new XMLSerializer().serializeToString(this.element)
         )}"

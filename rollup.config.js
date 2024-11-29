@@ -24,7 +24,7 @@ export default {
     importMetaAssets(),
     copy({
       targets: [
-        { src: 'public/ace/', dest: 'dist' },
+        { src: 'ace', dest: 'dist' },
       ]
     })
    ],
