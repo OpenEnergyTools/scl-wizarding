@@ -40,7 +40,7 @@
     "@material/mwc-switch": "^0.27.0",
     "@material/mwc-textarea": "^0.27.0",
     "@material/mwc-textfield": "^0.27.0",
-    "@openenergytools/scl-lib": "^0.14.5",
+    "@openenergytools/scl-lib": "^1.2.0",
     "@openscd/oscd-filtered-list": "^1.1.1",
     "ace-custom-element": "^1.6.5",
     "lit": "^2.4.0",
