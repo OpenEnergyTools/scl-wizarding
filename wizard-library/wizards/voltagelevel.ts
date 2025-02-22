@@ -163,8 +163,7 @@ function getVoltageAction(
       {
         parent: voltageLevel,
         node: element,
-        reference:
-          getReference(voltageLevel, 'Voltage') ?? voltageLevel.firstChild,
+        reference: getReference(voltageLevel, 'Voltage'),
       },
     ];
   }
